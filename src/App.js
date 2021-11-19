@@ -1,36 +1,61 @@
-import "./App.css";
-import script from "./script.js";
-import logo from "./logo.png";
-import tiktok1 from "./tiktok1.png";
-import tiktok2 from "./tiktok2.png";
-import tiktok3 from "./tiktok3.png";
-import tiktok4 from "./tiktok4.png";
+import "./App.scss";
+import Regist from "./script.js"; //import *
+import logo from "./assets/logo.png";
+import tiktok1 from "./assets/tiktok1.png";
+import tiktok2 from "./assets/tiktok2.png";
+import tiktok3 from "./assets/tiktok3.png";
+import tiktok4 from "./assets/tiktok4.png";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <div className="logo">
-          <a href="http://127.0.0.1:5500/index.html">
+          <a href="http://localhost:3000/">
             <img src={logo} width="100px" height="100px" alt="IIN logo" />
           </a>
         </div>
       </header>
-      <nav className="nav">
-        <ul>
-          <li>
-            <a href="http://127.0.0.1:5500/index.html">Home</a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/groups/869295393950632/?hoisted_section_header_type=recently_seen&multi_permalinks=884136769133161">
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href="https://vt.tiktok.com/ZSe2XFG4j/">Tiktok</a>
-          </li>
-        </ul>
-      </nav>
+      <ul className="nav nav-tabs">
+        <li className="nav-item">
+          <a
+            className="nav-link active"
+            aria-current="page"
+            href="http://localhost:3000/"
+          >
+            Home
+          </a>
+        </li>
+        <li className="nav-item">
+          <a
+            className="nav-link"
+            href="https://www.facebook.com/groups/869295393950632/?hoisted_section_header_type=recently_seen&multi_permalinks=884136769133161"
+          >
+            Facebook
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="https://vt.tiktok.com/ZSe2XFG4j">
+            Tiktok
+          </a>
+        </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Skills</a>
+          <ul className="dropdown-menu">
+            <li><a className="dropdown-item" href="#">Listening</a></li>
+            <li><a className="dropdown-item" href="#">Reading</a></li>
+            <li><a className="dropdown-item" href="#">Writing</a></li>
+            <li><a className="dropdown-item" href="#">Speaking</a></li>
+          </ul>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link disabled">Disabled</a>
+        </li>
+        <form className="d-flex">
+          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button className="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </ul>
       <header className="header">
         CÁC BÍ THUẬT ĐỂ IELTS LISTENING KHÔNG CÒN LÀ NỖI LO
       </header>
@@ -107,7 +132,7 @@ function App() {
           </div>
         </aside>
       </div>
-      <form action="#">
+      <form onSubmit={Regist}>
         <h2>Sign up to receive news</h2>
         <table>
           <tbody>
@@ -207,11 +232,7 @@ function App() {
             <tr>
               <td colSpan={2}>
                 <div align="right">
-                  <input
-                    type="submit"
-                    id="register_0"
-                    defaultValue="Register"
-                  />
+                  <input type="submit" id="register" defaultValue="Register" />
                 </div>
               </td>
             </tr>
@@ -219,6 +240,11 @@ function App() {
         </table>
       </form>
       <footer className="footer">Footer</footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
     </div>
   );
 }
