@@ -1,53 +1,46 @@
 @charset "UTF-8";
-/* background: -webkit-linear-gradient(to right, #ff4500, #FFFFFF);   Chrome 10-25, Safari 5.1-6 
+/* scss App.scss App.css: Convert scss to css
+background: -webkit-linear-gradient(to right, #ff4500, #FFFFFF);   Chrome 10-25, Safari 5.1-6 
 background: linear-gradient(to right, #ff4500, #FFFFFF);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 body {
   font-family: Arial;
   font-size: 18px;
 }
-
 .header {
   display: flex;
   flex-flow: row wrap;
   width: 90%;
   height: auto;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 10px;
   font-size: 40px;
   text-align: center;
   color: #ff4500;
 }
-/*
 .nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
   background-color: #ff4500;
-  width: 100%;
-  height: auto;
 }
-*//*
+/*
 ul {
-  position: -webkit-sticky;*/
+  position: -webkit-sticky;
   /* áp dụng với Safari *//*
   position: sticky;
   list-style-type: none;
   overflow: hidden;
   /* Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi. 
-}*//*
+}/*
 li {
   float: left;
 }
-
-li a {
-  display: block;
+*/
+.nav-link {
   color: white;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
 }
-
+.nav-tabs .nav-link.active, .nav-link:focus, .nav-link:hover{
+  color: #ff4500;
+  background-color: white;
+}
+/*
 li a:hover {
   background-color: white;
   color: #ff4500;
@@ -110,7 +103,7 @@ img:hover {
 }
 
 .logo {
-  margin: 10px;
+  margin-top: 50px;
   display: inline-block;
 }
 
@@ -120,17 +113,19 @@ h2 {
   margin: 15px 0px;
 }
 
-form {
+.regist{
   background-color: antiquewhite;
   margin: 50px auto;
-  width: 400px;
+  padding: 20px;
+  width: 50%;
   height: auto;
-  padding: 10px;
   border: 2px solid #ff4500;
 }
-
-#register {
-  margin-top: 20px;
+.row{
+  margin: 20px auto;
+}
+#registerbutton {
+  margin: 10px;
   width: auto;
   height: auto;
   padding: 10px;
@@ -143,7 +138,7 @@ form {
   transition: 0.3s;
 }
 
-#register:hover {
+#registerbutton:hover {
   animation: pulse 1s infinite;
   transition: 0.3s;
 }
@@ -198,17 +193,8 @@ form {
     grid-template-columns: repeat(2, minmax(110px, 150px));
   }
 
-  img {
-    width: 100px;
-    height: 150px;
-  }
-
   h2 {
     font-size: 16px;
-  }
-
-  form {
-    width: 200px;
   }
 }
 

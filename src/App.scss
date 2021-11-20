@@ -1,7 +1,7 @@
-/* background: -webkit-linear-gradient(to right, #ff4500, #FFFFFF);   Chrome 10-25, Safari 5.1-6 
+@charset "UTF-8";
+/* scss App.scss App.css: Convert scss to css
+background: -webkit-linear-gradient(to right, #ff4500, #FFFFFF);   Chrome 10-25, Safari 5.1-6 
 background: linear-gradient(to right, #ff4500, #FFFFFF);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-$maincolor : #ff4500;
-
 body {
   font-family: Arial;
   font-size: 18px;
@@ -11,42 +11,42 @@ body {
   flex-flow: row wrap;
   width: 90%;
   height: auto;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 10px;
   font-size: 40px;
   text-align: center;
-  color: $maincolor;
+  color: #ff4500;
 }
 .nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  background-color: $maincolor;
-  width: 100%;
-  height: auto;
+  background-color: #ff4500;
 }
+/*
 ul {
-  position: -webkit-sticky; /* áp dụng với Safari */
+  position: -webkit-sticky;
+  /* áp dụng với Safari *//*
   position: sticky;
   list-style-type: none;
-  overflow: hidden; /* Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi. */
-}
+  overflow: hidden;
+  /* Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi. 
+}/*
 li {
   float: left;
 }
-li a {
-  display: block;
+*/
+.nav-link {
   color: white;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
 }
+.nav-tabs .nav-link.active, .nav-link:focus, .nav-link:hover{
+  color: #ff4500;
+  background-color: white;
+}
+/*
 li a:hover {
   background-color: white;
-  color: $maincolor;
+  color: #ff4500;
   font-weight: bold;
-}
+}*/
+
 .content {
   margin-left: 10%;
   width: 70%;
@@ -54,9 +54,11 @@ li a:hover {
   display: flex;
   flex-direction: row;
 }
+
 .section {
   height: auto;
 }
+
 .aside {
   border-color: brown;
   width: 15%;
@@ -64,8 +66,9 @@ li a:hover {
   display: flex;
   flex-flow: column wrap;
 }
+
 .footer {
-  background-color: $maincolor;
+  background-color: #ff4500;
   font-size: 16px;
   text-align: center;
   font-style: italic;
@@ -75,60 +78,71 @@ li a:hover {
   height: auto;
   vertical-align: bottom;
 }
+
 #gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
 }
+
 img {
   display: inline-block;
   align-items: left;
   max-width: 100%;
   height: auto;
   margin: 10px 10px;
-  filter: drop-shadow(0 0 5px $maincolor);
+  filter: drop-shadow(0 0 5px #ff4500);
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
+
 img:hover {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
+
 .logo {
-  margin: 10px;
+  margin-top: 50px;
   display: inline-block;
 }
+
 h2 {
   font-size: 20px;
   font-weight: bold;
   margin: 15px 0px;
 }
-form {
+
+.regist{
   background-color: antiquewhite;
   margin: 50px auto;
-  width: 400px;
+  padding: 20px;
+  width: 50%;
   height: auto;
-  padding: 10px;
-  border: 2px solid $maincolor;
+  border: 2px solid #ff4500;
 }
-#register {
-  margin-top: 20px;
+.row{
+  margin: 20px auto;
+}
+#registerbutton {
+  margin: 10px;
   width: auto;
   height: auto;
   padding: 10px;
   cursor: pointer;
   display: inline-block;
   text-transform: uppercase;
-  color: $maincolor;
+  color: #ff4500;
   background-color: transparent;
-  border: 3px solid $maincolor;
+  border: 3px solid #ff4500;
   transition: 0.3s;
 }
-#register:hover {
+
+#registerbutton:hover {
   animation: pulse 1s infinite;
   transition: 0.3s;
 }
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -147,39 +161,41 @@ form {
   font-weight: bold;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   body {
     font-size: 14px;
   }
+
   .header {
     font-size: 22px;
   }
+
   .nav {
     font-size: 14px;
   }
+
   li a {
     padding: 5px;
   }
+
   .content {
     flex-direction: column;
   }
+
   .aside {
     display: inline-block;
     flex-direction: row;
     justify-content: space-around;
   }
+
   #gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(110px, 150px));
   }
-  img {
-    width: 100px;
-    height: 150px;
-  }
+
   h2 {
     font-size: 16px;
   }
-  form {
-    width: 200px;
-  }
 }
+
+/*# sourceMappingURL=App.css.map */

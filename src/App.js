@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./css/App.css";
 import Regist from "./script.js"; //import *
 import logo from "./assets/logo.png";
 import tiktok1 from "./assets/tiktok1.png";
@@ -16,7 +16,8 @@ function App() {
           </a>
         </div>
       </header>
-      <ul className="nav nav-tabs">
+      <div class="container-fluid">
+      <ul className="nav fixed-top nav-tabs">
         <li className="nav-item">
           <a
             className="nav-link active"
@@ -40,22 +41,23 @@ function App() {
           </a>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Skills</a>
+          <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="http://localhost:3000/" role="button" aria-expanded="false">Skills</a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Listening</a></li>
-            <li><a className="dropdown-item" href="#">Reading</a></li>
-            <li><a className="dropdown-item" href="#">Writing</a></li>
-            <li><a className="dropdown-item" href="#">Speaking</a></li>
+            <li><a className="dropdown-item" href="http://localhost:3000/">Listening</a></li>
+            <li><a className="dropdown-item" href="http://localhost:3000/">Reading</a></li>
+            <li><a className="dropdown-item" href="http://localhost:3000/">Writing</a></li>
+            <li><a className="dropdown-item" href="http://localhost:3000/">Speaking</a></li>
           </ul>
         </li>
         <li className="nav-item">
-          <a className="nav-link disabled">Disabled</a>
+          <a className="nav-link disabled" href="http://localhost:3000/">Disabled</a>
         </li>
-        <form className="d-flex">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit">Search</button>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Enter search" aria-label="Search" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </ul>
+      </div>
       <header className="header">
         CÁC BÍ THUẬT ĐỂ IELTS LISTENING KHÔNG CÒN LÀ NỖI LO
       </header>
@@ -132,163 +134,65 @@ function App() {
           </div>
         </aside>
       </div>
-      <form onSubmit={Regist}>
-        <h2>Sign up to receive news</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td className="tdLabel">
-                <label htmlFor="register_name" className="label">
-                  Username:
-                </label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  name="name"
-                  defaultValue
-                  id="register_name"
-                  style={{ width: "90%" }}
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td className="tdLabel">
-                <label htmlFor="register_password" className="label">
-                  Password:
-                </label>
-              </td>
-              <td>
-                <input
-                  type="password"
-                  name="password"
-                  id="register_password"
-                  style={{ width: "90%" }}
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td className="tdLabel">
-                <label htmlFor="register_email" className="label">
-                  Email:
-                </label>
-              </td>
-              <td>
-                <input
-                  type="email"
-                  name="email"
-                  defaultValue
-                  id="register_email"
-                  style={{ width: "90%" }}
-                  required
-                />
-              </td>
-            </tr>
-            <tr></tr>
-            <tr>
-              <td className="tdLabel">
-                <label htmlFor="register_language" className="label">
-                  Your native language:
-                </label>
-              </td>
-              <td>
-                <select
-                  name="language"
-                  id="register_language"
-                  style={{ width: "90%" }}
-                  required
-                >
-                  <option value="vietnamese">vietnamese</option>
-                  <option value="english">english</option>
-                  <option value="japanese">japanese</option>
-                  <option value="chinese">chinese</option>
-                  <option value="other">other</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input
-                  type="checkbox"
-                  name="rule"
-                  id="rule"
-                  defaultValue="rule"
-                  required
-                />
-                <label htmlFor="rule">Agree the terms and conditions</label>
-              </td>
-              <td>
-                <input
-                  type="checkbox"
-                  name="news"
-                  id="news"
-                  defaultValue="news"
-                />
-                <label htmlFor="news">Received news</label>
-              </td>
-            </tr>
-            <tr>
-              <td colSpan={2}>
-                <div align="right">
-                  <input type="submit" id="register" defaultValue="Register" />
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </form>
-
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-4">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">Username</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
-            <div class="invalid-feedback">
-              Please choose a username.
+      <form className="row g-3 needs-validation" novalidate>
+        <div className="regist">
+          <div className="col-mb-3">
+            <label for="exampleInputEmail1" className="form-label">Email address</label>
+            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+            <div className="valid-feedback">
+              Looks good!
             </div>
           </div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" />
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">Your native language:</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option value="1">Vietnamese</option>
-            <option value="2">Chinese</option>
-            <option value="3">English</option>
-          </select>
-        </div>
-
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-            <label class="form-check-label" for="invalidCheck">
-              Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
+          <div className="col-mb-3">
+            <label for="validationCustomUsername" className="form-label">Username</label>
+            <div className="input-group has-validation">
+              <span className="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" className="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+              <div className="invalid-feedback">
+                Please choose a username.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12">
-          <div align="right">
-            <input type="submit" id="register" defaultValue="Register" />
+          <div className="col-mb-3">
+            <label for="exampleInputPassword1" className="form-label">Password</label>
+            <input type="password" className="form-control" id="exampleInputPassword1" required />
+            <div className="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div className="col-mb-3">
+            <label for="validationCustom04" className="form-label">Your native language:</label>
+            <select className="form-select" id="validationCustom04" required>
+              <option value="1">Vietnamese</option>
+              <option value="2">Chinese</option>
+              <option value="3">English</option>
+            </select>
+          </div>
+
+          <div className="col-12">
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+              <label className="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div className="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div className="col-12">
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" value="" id="invalidCheck" />
+              <label className="form-check-label" for="invalidCheck">
+                Receive news
+              </label>
+            </div>
+          </div>
+          <div className="col-12">
+            <div align="right">
+              <input type="submit" id="registerbutton" defaultValue="Register" onSubmit={Regist} />
+            </div>
           </div>
         </div>
       </form>
