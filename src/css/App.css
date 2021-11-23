@@ -1,11 +1,14 @@
-@charset "UTF-8";
-/* scss App.scss App.css: Convert scss to css
+/* https://hocwebchuan.com/tutorial/scss/scss_auto_compile.php
+Add property "scss": "node-sass --watch ./src/App.scss -o css" to "scripts": {} in package.json
+npm run scss -> auto compile scss to css
+sass ./src/App.scss ./src/css/App.css -> Convert manually scss to css if auto compiler fail
 background: -webkit-linear-gradient(to right, #ff4500, #FFFFFF);   Chrome 10-25, Safari 5.1-6 
 background: linear-gradient(to right, #ff4500, #FFFFFF);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 body {
   font-family: Arial;
-  font-size: 18px;
+  font-size: 14px;
 }
+
 .header {
   display: flex;
   flex-flow: row wrap;
@@ -17,6 +20,7 @@ body {
   text-align: center;
   color: #ff4500;
 }
+
 .nav {
   background-color: #ff4500;
 }
@@ -24,6 +28,7 @@ body {
 .nav-link {
   color: white;
 }
+
 .nav-tabs .nav-link.active,
 .nav-link:focus,
 .nav-link:hover {
@@ -45,7 +50,7 @@ body {
 }
 
 .aside {
-  width: 15%;
+  width: 40%;
   height: auto;
 }
 
@@ -59,6 +64,10 @@ body {
   width: 100%;
   height: auto;
   vertical-align: bottom;
+}
+.row-cols-2 {
+  margin: 10px;
+  padding: 10px;
 }
 /*
 #gallery {
@@ -83,13 +92,18 @@ body {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
+.horizontalImage {
+  width: 100%;
+  margin: 10px 10px 10px 0px;
+}
 .card {
   font-size: 12px;
-  width: 10rem;
+  width: 12rem;
   padding: 10px;
 }
+
 .logo {
-  margin: 20%;
+  margin: 5% 0% 0% 20%;
 }
 
 h2 {
@@ -143,10 +157,12 @@ h2 {
   font-style: italic;
   font-weight: bold;
 }
-
+.btn-outline-success {
+  margin: 10px auto;
+}
 @media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .header {
@@ -164,17 +180,25 @@ h2 {
   .content {
     flex-direction: column;
   }
+
   .section {
     width: 90%;
   }
+  .aside {
+    width: 90%;
+  }
   .card {
-    width: 8rem;
+    width: 80%;
     margin: 10px 10px;
     padding: 5px;
+  }
+  .registform {
+    width: 80%;
   }
   h2 {
     font-size: 16px;
   }
 }
+/*# sourceMappingURL=App.css.map */
 
 /*# sourceMappingURL=App.css.map */

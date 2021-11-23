@@ -1,12 +1,13 @@
 import "./css/App.css";
 import Regist from "./script.js"; //import *
-import logo from "./assets/logo.png";
+import logo from "./assets/logo2.png";
 import tiktok1 from "./assets/tiktok1.png";
 import tiktok2 from "./assets/tiktok2.png";
 import tiktok3 from "./assets/tiktok3.png";
 import tiktok4 from "./assets/tiktok4.png";
-import tiktok5 from "./assets/tiktok5.png";
+import tiktok8 from "./assets/tiktok8.png";
 import tiktok6 from "./assets/tiktok6.png";
+import tiktok7 from "./assets/tiktok7.png";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <div class="container-fluid">
         <ul className="nav fixed-top nav-tabs">
           <a class="navbar-brand" href="http://localhost:3000/">
-            <img class="logo" src={logo} width="30" height="30" alt="IIN logo" />
+            <img class="logo" src={logo} width="40" height="40" alt="IIN logo" />
           </a>
           <li className="nav-item">
             <a
@@ -76,7 +77,7 @@ function App() {
                 </div>
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src={tiktok6} class="d-block w-100" alt="..." />
+                <img src={tiktok7} class="d-block w-100" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Second slide label</h5>
                   <p>Some representative placeholder content for the second slide.</p>
@@ -99,11 +100,30 @@ function App() {
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          <div class="container">
+            <div class="row row-cols-2">
+              <span class="border border-success">
+                <div class="col">
+                  <img src={tiktok8} class = "horizontalImage"/>
+                </div>
+                </span>
+                <span class="border border-success">
+                <div class="col">
+                  <h2>Nếu bị lỡ các đáp án</h2>
+                  <p>Hãy bình tĩnh chuyển ngay sang câu tiếp theo nếu bạn không muốn lỡ mất cả những phần kế tiếp. Cách xử lý tốt nhất là hãy đánh dấu vào câu đó để tránh khi chép đáp án bị nhầm và đến ngay với bí kíp thứ 4.
+                  </p>
+                </div>
+                <div class="d-grid mx-auto">
+                <button type="button" class="btn btn-outline-success">Success</button>
+                </div>
+              </span>
+            </div>
+          </div>
         </section>
         <aside className="aside">
           <h2>Có thể bạn quan tâm</h2>
           <div class="container">
-            <div class="row row-cols-2">
+            <div class="row">
               <div class="col">
                 <div class="card border-danger mb-3" >
                   <img src={tiktok1} class="card-img-right" alt="tiktok5" />
