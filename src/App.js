@@ -18,7 +18,7 @@ function App() {
       <div class="container-fluid">
         <ul className="nav fixed-top nav-tabs">
           <a class="navbar-brand" href="http://localhost:3000/">
-            <img class="logo" src={logo} width="40" height="40" alt="IIN logo" />
+            <img class="logo" src={logo} width="30" height="30" alt="IIN logo" />
           </a>
           <li className="nav-item">
             <a
