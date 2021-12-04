@@ -104,24 +104,24 @@ function App() {
             <div class="row row-cols-2">
               <span class="border border-success">
                 <div class="col">
-                  <img src={tiktok8} class = "horizontalImage"/>
+                  <img src={tiktok8} class="horizontalImage" alt="tiktok" />
                 </div>
-                </span>
-                <span class="border border-success">
+              </span>
+              <span class="border border-success">
                 <div class="col">
                   <h2>Nếu bị lỡ các đáp án</h2>
                   <p>Hãy bình tĩnh chuyển ngay sang câu tiếp theo nếu bạn không muốn lỡ mất cả những phần kế tiếp. Cách xử lý tốt nhất là hãy đánh dấu vào câu đó để tránh khi chép đáp án bị nhầm và đến ngay với bí kíp thứ 4.
                   </p>
                 </div>
                 <div class="d-grid mx-auto">
-                <button type="button" class="btn btn-outline-success">Success</button>
+                  <button type="button" class="btn btn-outline-success">Khai sáng ngay</button>
                 </div>
               </span>
             </div>
           </div>
         </section>
         <aside className="aside">
-          <h2>Có thể bạn quan tâm</h2>
+          <h1>Có thể bạn quan tâm</h1>
           <div class="container">
             <div class="row">
               <div class="col">
@@ -172,66 +172,69 @@ function App() {
         </aside>
       </div>
       <form className="row g-3 needs-validation" novalidate>
-        <div className="registform">
-          <div className="col-mb-3">
-            <label for="exampleInputEmail1" className="form-label">Email address</label>
-            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
-            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-            <div className="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          <div className="col-mb-3">
-            <label for="validationCustomUsername" className="form-label">Username</label>
-            <div className="input-group has-validation">
-              <span className="input-group-text" id="inputGroupPrepend">@</span>
-              <input type="text" className="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
-              <div className="invalid-feedback">
-                Please choose a username.
+        
+          <div className="registform">
+          
+            <div className="col-mb-3">
+              <label for="exampleInputEmail1" className="form-label">Email address</label>
+              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+              <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+              <div className="valid-feedback">
+                Looks good!
               </div>
             </div>
-          </div>
-          <div className="col-mb-3">
-            <label for="exampleInputPassword1" className="form-label">Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1" required />
-            <div className="valid-feedback">
-              Looks good!
+            <div className="col-mb-3">
+              <label for="validationCustomUsername" className="form-label">Username</label>
+              <div className="input-group has-validation">
+                <span className="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" className="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+                <div className="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="col-mb-3">
-            <label for="validationCustom04" className="form-label">Your native language:</label>
-            <select className="form-select" id="validationCustom04" required>
-              <option value="1">Vietnamese</option>
-              <option value="2">Chinese</option>
-              <option value="3">English</option>
-            </select>
-          </div>
+            <div className="col-mb-3">
+              <label for="exampleInputPassword1" className="form-label">Password</label>
+              <input type="password" className="form-control" id="exampleInputPassword1" required />
+              <div className="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div className="col-mb-3">
+              <label for="validationCustom04" className="form-label">Your native language:</label>
+              <select className="form-select" id="validationCustom04" required>
+                <option value="1">Vietnamese</option>
+                <option value="2">Chinese</option>
+                <option value="3">English</option>
+              </select>
+            </div>
 
-          <div className="col-12">
-            <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-              <label className="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
-              <div className="invalid-feedback">
-                You must agree before submitting.
+            <div className="col-12">
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                <label className="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div className="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div className="col-12">
+              <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="invalidCheck" />
+                <label className="form-check-label" for="invalidCheck">
+                  Receive news
+                </label>
+              </div>
+            </div>
+            <div className="col-12">
+              <div align="right">
+                <input type="submit" id="registerbutton" defaultValue="Register" onSubmit={Regist} />
               </div>
             </div>
           </div>
-          <div className="col-12">
-            <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="" id="invalidCheck" />
-              <label className="form-check-label" for="invalidCheck">
-                Receive news
-              </label>
-            </div>
-          </div>
-          <div className="col-12">
-            <div align="right">
-              <input type="submit" id="registerbutton" defaultValue="Register" onSubmit={Regist} />
-            </div>
-          </div>
-        </div>
+        
       </form>
       <footer className="footer">Footer</footer>
       <script
