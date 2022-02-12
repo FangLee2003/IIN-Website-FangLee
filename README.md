@@ -1,3 +1,5 @@
+![IIN Login Page - Fang Lee](https://user-images.githubusercontent.com/75077747/153695922-1e499d3a-79c6-4bcd-821e-e241a3b43b18.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
